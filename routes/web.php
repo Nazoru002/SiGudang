@@ -27,5 +27,8 @@ Route::group(['prefix' => 'backend', 'as' => 'backend.'], function ()
 
     Route::get('/kategori', 'Backend\CategoryController@index')->name('kategori');
     Route::get('/barang', 'Backend\StuffController@index')->name('barang');
-    Route::get('/barang-masuk', 'Backend\BarangMasukInController@index')->name('barang-masuk');
+    Route::get('/barang-masuk', 'Backend\BarangMasukController@index')->name('barang-masuk');
+    Route::post('/barang-masuk/create', 'Backend\BarangMasukController@store')->name('barang-masuk-create');
+    Route::get('/barang-keluar', 'Backend\BarangKeluarController@index')->name('barang-keluar');
+    Route::post('/barang-keluar/create', 'Backend\BarangKeluarController@store')->name('barang-keluar-create');
 });

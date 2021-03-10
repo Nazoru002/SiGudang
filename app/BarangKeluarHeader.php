@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BarangMasukHeader extends Model
+class BarangKeluarHeader extends Model
 {
     protected $fillable = [
-      'tgl_brg_masuk',
-      'asal_barang',
+      'tgl_brg_keluar',
+      'tujuan_keluar',
       'penginput'
     ];
 }

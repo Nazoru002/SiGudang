@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\BarangMasuk;
+namespace App\Http\Livewire\BarangKeluar;
 
 use App\Stuff;
 use Livewire\Component;
@@ -14,7 +14,7 @@ class Table extends Component
 
     public function render()
     {
-        return view('livewire.barang-masuk.table');
+        return view('livewire.barang-keluar.table');
     }
 
     public function mount()
@@ -27,12 +27,11 @@ class Table extends Component
     {
       try {
         $cek = Stuff::findOrFail($this->barang);
-
+        
         $this->cart[$this->barang] = [
           'id' => $this->barang,
           'name' => $cek->name,
-          'qty' => $this->qty,
-
+          'qty' => $this->qty
         ];
       } catch (\Exception $e) {
         dd($e);
