@@ -6,6 +6,8 @@
         <div class="card-header">
             Master Data Barang
             <div class="float-right">
+                <a href="{{ route('backend.barang-print') }}" target="_blank" class="btn btn-sm btn-info">Print Data Barang</a>
+
                 <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">
                     Tambah Data
                 </button>

@@ -31,4 +31,5 @@ Route::group(['prefix' => 'backend', 'as' => 'backend.'], function ()
     Route::post('/barang-masuk/create', 'Backend\BarangMasukController@store')->name('barang-masuk-create');
     Route::get('/barang-keluar', 'Backend\BarangKeluarController@index')->name('barang-keluar');
     Route::post('/barang-keluar/create', 'Backend\BarangKeluarController@store')->name('barang-keluar-create');
+    Route::get('/barang-print', 'Backend\StuffController@print')->name('barang-print');
 });
